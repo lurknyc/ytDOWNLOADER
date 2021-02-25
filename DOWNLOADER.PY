@@ -9,10 +9,23 @@ print("Title: ",yt.title)
 print("Number of views: ",yt.views)
 print("Length of video: ",yt.length)
 print("Rating of video: ",yt.rating)
-#Getting the highest resolution possible
 ys = yt.streams.get_highest_resolution()
 
-#Starting download
-print("Downloading...")
-ys.download()
-print("Download completed!!")
+download_prompt = input("Would you like to download the video? (1 is YES, 2 is NO)")
+
+if download_prompt == 1 :
+
+    ys.download()
+    #Starting download
+    print("Downloading...")
+    print("Download completed!!")
+
+
+elif download_prompt == 2 :
+
+    print("Restart the Program to Try Again!")
+    exit()
+
+#Getting the highest resolution possible
+
+
